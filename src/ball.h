@@ -7,8 +7,7 @@ public:
     float x;
     float y;
     float xVelocity;
-    float yVelocity;
-    float spin;
+    float yVelocity;    
 
     Ball();
 

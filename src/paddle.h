@@ -1,7 +1,6 @@
 #ifndef PADDLE_H
 #define PADDLE_H
 
-
 class Paddle
 {
 public:
@@ -13,8 +12,8 @@ public:
     Paddle(int x, int y);
 
     void draw();
-    void moveup();
-    void movedown();
+    void moveup(int);
+    void movedown(int);
 };
 
 #endif // PADDLE_H

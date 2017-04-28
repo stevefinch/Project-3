@@ -1,12 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
-#include "field.h"
+#include "game.h"
 
 class ofApp : public ofBaseApp{
 
 public:
-    Field field;
+    Game game;
 
     void setup();
     void update();

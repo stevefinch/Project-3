@@ -14,8 +14,10 @@ Project{
         files: [
             "src/ball.cpp",
             "src/ball.h",
-            "src/field.cpp",
-            "src/field.h",
+            "src/bullet.cpp",
+            "src/bullet.h",
+            "src/game.cpp",
+            "src/game.h",
             "src/paddle.cpp",
             "src/paddle.h",
             "src/main.cpp",

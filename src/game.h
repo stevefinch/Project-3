@@ -1,26 +1,30 @@
-#ifndef FIELD_H
-#define FIELD_H
+#ifndef GAME_H
+#define GAME_H
 
 #include "ball.h"
 #include "paddle.h"
+#include "bullet.h"
 
-class Field
+class Game
 {
 public:
+    enum {START, GAME, END} screen;
     int height;
     int width;
     float velocityMultiplier;
     int ballsRemaining;
-    bool visible;
+    int bulletsRemaining;
+    int score;
 
     Ball *ball;
     Paddle *userPaddle;
     Paddle *computerPaddle;
+    Bullet *bullet;
 
-    Field();
+    Game();
 
     void draw();
     void update();
 };
 
-#endif // FIELD_H
+#endif // GAME_H

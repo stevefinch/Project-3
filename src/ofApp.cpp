@@ -1,21 +1,26 @@
 #include "ofApp.h"
 
-//--------------------------------------------------------------
 void ofApp::setup(){
 
-
 }
 
-//--------------------------------------------------------------
 void ofApp::update(){
-    if ( field.visible)
-        field.update();
+        game.update();
+
 }
 
-//--------------------------------------------------------------
 void ofApp::draw(){
-    if ( field.visible)
-        field.draw();
+        game.draw();
+
+}
+
+void ofApp::mousePressed(int x, int y, int button){
+    if (game.screen == game.START)
+        //TODO check if on start button
+        game.screen = game.GAME;
+    else if (game.screen == game.GAME)
+        game.screen = game.END;
+
 }
 
 //--------------------------------------------------------------
@@ -39,9 +44,6 @@ void ofApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
