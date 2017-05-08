@@ -1,3 +1,6 @@
+//STEVE FINCH
+//Project 3 Pong's Revenge
+
 #include "ofMain.h"
 #include "ofApp.h"
 

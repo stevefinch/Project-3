@@ -46,19 +46,27 @@ void Game::update() {
             ball->yVelocity = - ball->yVelocity;
 
         // Check Ball collision with user paddle
-        if (ball->x < 50) {
-            if ( (ball->y > userPaddle->y) && (ball->y < userPaddle->y + 80) ) { // hit
-                ball->xVelocity = - ball->xVelocity;
-                ball->yVelocity -= (userPaddle->y - ball->y + 40)/40; //offcenter paddle hit
-                ++score;
-            }
-            else { // miss
-                velocityMultiplier = 1.0;
-                ball->reset();
-                --ballsRemaining;
+//        if (ball->paddleHit(userPaddle))
+//            ++score;
+//        else {
+//            ball->reset();
+//            --ballsRemaining;
+//            velocityMultiplier = 1.0;
+//        }
 
-            }
-        }
+//        if (ball->x < 50) {
+//            if ( (ball->y > userPaddle->y) && (ball->y < userPaddle->y + 80) ) { // hit
+//                ball->xVelocity = - ball->xVelocity;
+//                ball->yVelocity -= (userPaddle->y - ball->y + 40)/40; //offcenter paddle hit
+//                ++score;
+//            }
+//            else { // miss
+//                velocityMultiplier = 1.0;
+//                ball->reset();
+//                --ballsRemaining;
+
+//            }
+//        }
 
         // Check Ball collision with computer paddle
 // TODO
@@ -77,9 +85,9 @@ void Game::update() {
 //        }
 
         //TODO remove next lines after testing
-            if (ball->x > ofGetWidth()-50 ) {
-                ball->xVelocity = - ball->xVelocity;
-            }
+//            if (ball->x > ofGetWidth()-50 ) {
+//                ball->xVelocity = - ball->xVelocity;
+//            }
         //TODO end remove
 
          // Check Bullet collision with computer paddle

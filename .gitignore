@@ -8,3 +8,5 @@ config\.make
 bin/data/
 
 bin/
+
+src\.zip
